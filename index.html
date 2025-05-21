@@ -7,31 +7,39 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Age calculator app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+ <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
+      <div class="flex gap-4 mb-6">
+        <div class="flex-1">
+          <label for="day" class="block text-xs font-bold tracking-widest text-gray-600 uppercase mb-1">Day</label>
+          <input type="text" id="day" placeholder="DD" maxlength="2" class="w-full p-2.5 text-xl border border-gray-300 rounded font-bold" />
+        </div>
+        <div class="flex-1">
+          <label for="month" class="block text-xs font-bold tracking-widest text-gray-600 uppercase mb-1">Month</label>
+          <input type="text" id="month" placeholder="MM" maxlength="2" class="w-full p-2.5 text-xl border border-gray-300 rounded font-bold" />
+        </div>
+        <div class="flex-1">
+          <label for="year" class="block text-xs font-bold tracking-widest text-gray-600 uppercase mb-1">Year</label>
+          <input type="text" id="year" placeholder="YYYY" maxlength="4" class="w-full p-2.5 text-xl border border-gray-300 rounded font-bold" />
+        </div>
+      </div>
 
-  Day
-  DD
+      <div class="relative my-8 flex items-center">
+        <div class="flex-grow h-px bg-gray-300"></div>
+        <button id="calculate-btn" class="absolute right-0 bg-purple-600 hover:bg-purple-700 text-white w-14 h-14 rounded-full flex items-center justify-center">
+          <img src="./assets/images/icon-arrow.svg" alt="Calculate" class="w-6" />
+        </button>
+      </div>
 
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="text-5xl font-bold italic leading-tight">
+        <div><span id="years" class="text-purple-600">--</span> years</div>
+        <div><span id="months" class="text-purple-600">--</span> months</div>
+        <div><span id="days" class="text-purple-600">--</span> days</div>
+      </div>
+    </div>
+  <script src="script.js"></script>
 </body>
 </html>
